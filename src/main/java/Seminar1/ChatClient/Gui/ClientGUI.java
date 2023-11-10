@@ -50,7 +50,7 @@ public class ClientGUI extends JFrame {
                             log.append(dbMessage.reedMessage());
                         }
                 }else {
-                    log.append("Сервер не запущен");
+                    log.append("Сервер не запущен\n");
                 }
             }
         });
@@ -59,12 +59,12 @@ public class ClientGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (serverGUI.getServerWork()) {
-                    String message = tfLogin.getText() +": " + textField.getText();
+                    String message = tfLogin.getText() +": " + textField.getText() +"\n";
                     dbMessage.saveMessage(message);
                     log.append(message);
 
                 }else {
-                    log.append("Сервер не запущен");
+                    log.append("Сервер не запущен\n");
                 }
             }
         });
