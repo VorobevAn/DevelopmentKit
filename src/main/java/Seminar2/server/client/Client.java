@@ -23,7 +23,7 @@ public class Client {
         if (server.connectUser(this)){
             printText("Вы успешно подключились!\n");
             connected = true;
-            String log = server.History();
+            String log = server.history();
             if (log != null){
                 printText(log);
             }

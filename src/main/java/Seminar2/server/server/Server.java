@@ -55,7 +55,7 @@ public class Server {
             client.answer(text);
         }
     }
-   public String History(){
+   public String history(){
        return iRepo.getHistory();
     }
 
