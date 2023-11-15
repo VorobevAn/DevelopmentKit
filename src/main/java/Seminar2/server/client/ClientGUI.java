@@ -75,6 +75,7 @@ Client client;
         tfLogin = new JTextField("Ivan Ivanovich");
         password = new JPasswordField("123456");
         btnLogin = new JButton("login");
+
         btnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
