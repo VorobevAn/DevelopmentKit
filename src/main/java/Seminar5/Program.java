@@ -13,13 +13,13 @@ public class Program {
     public void start() throws InterruptedException {
         for (int i = 0; i < forks.length; i++) {
             if (i % 2 == 0) {
-                forks[i] = new Fork(false);
-            } else {
                 forks[i] = new Fork(true);
+            } else {
+                forks[i] = new Fork(false);
             }
         }
         for (int i = 0; i < philosophers.length; i++) {
-            philosophers[i] = new Philosopher(i, forks[i], forks[andArray(i)], NUMBEROFMEALS);
+            philosophers[i] = new Philosopher(i, forks[i], forks[endOfArray(i)], NUMBEROFMEALS);
             new Thread(philosophers[i]).start();
             Thread.sleep(200);
         }
@@ -32,7 +32,7 @@ public class Program {
      * @param index проверяемый индекс
      * @return возвращает нужный индекс
      */
-    public int andArray(int index) {
+    public int endOfArray(int index) {
         if (index == PHILOSOPHER) {
             return 0;
         }
